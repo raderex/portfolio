@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- navbar section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"> </a>
+        <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,93 +40,102 @@
     </nav>
 
     <!-- home section -->
-    <section id="home">
+    <section id="home" data-aos="fade-up">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
                     <h1>Aashutosh Pantha</h1>
-                    <p>A full stack developer with team-oriented leadership skills.</p>
-                    <a href="D:\Aashutosh Pantha\portfolio\cv.pdf" download="cv.pdf">
-                    <button type="btn btn-primary">Download CV
-                        </a>
+                    <p>Software developer passionate about AI, Batman, and scalable applications, leveraging ASP.NET Core, Python, and database management to craft intelligent, user-friendly solutions while driving innovation in tech.</p>
+                    <a href="cv.pdf" download="cv.pdf" target="_blank">
+                        <button type="button" class="btn btn-primary">Download CV</button>
+                    </a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="space.jpg" alt="Aashutosh Pantha" width="420" height="420">
+                    <img src="space.jpg" alt="Aashutosh Pantha" width="420" height="420" data-aos="zoom-in">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- about section -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div class="container">
             <h1>About Me</h1>
-            <p>A goal-driven man.</p>
+            <p>Aspiring software developer with a strong foundation in computer science, software engineering, and web technologies. Passionate about building efficient and scalable applications using ASP.NET Core, Python, and database management. Adept at combining technical expertise with design sensibilities to create user-friendly digital experiences. Enthusiastic about contributing to innovative and mission-driven projects while continuously learning and growing in the tech industry.</p>
         </div>
     </section>
 
-    <!-- services section -->
     <section id="services">
         <div class="container">
             <h1>Services</h1>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="card">
                         <i class="fas fa-code"></i>
                         <h2>Web Development</h2>
-                        <p>These are my projects.(Full stack)</p>
+                        <p>High Quality Websites and Web Applications.</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="card">
                         <i class="fas fa-paint-brush"></i>
                         <h2>Graphic Design</h2>
-                        <p>My arts which you can shop at radservices.com.np.</p>
+                        <p>Shop at radservices.com.np</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="card">
                         <i class="fas fa-camera"></i>
                         <h2>Photography</h2>
-                        <p>These are some clicks.You can shop at:</p>
+                        <p>Shop at: radservices.com.np</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- portfolio section -->
-    <section id="portfolio">
+    <section id="portfolio" data-aos="fade-up">
         <div class="container">
             <h1>Portfolio</h1>
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="project1.jpg" alt="Project 1">
-                        <h2>Project 1</h2>
-                        <p>My Python Projects.</p>
-                    </div>
+                <!-- Python Development Card -->
+                <div class="col-lg-4" data-aos="fade-left">
+                    <a href="https://github.com/raderex/python-random" target="_blank">
+                        <div class="card">
+                            <img src="python.png" alt="Python Development">
+                            <h2>Python Development</h2>
+                            <p>Showcasing Python projects and applications.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="project2.jpg" alt="Project 2">
-                        <h2>Project 2</h2>
-                        <p>My Web-services.</p>
-                    </div>
+                <!-- Web Applications Card -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <a href="https://github.com/raderex/Rakta-Kosh" target="_blank">
+                        <div class="card">
+                            <img src="netcentric.png" alt="Netcentric Development">
+                            <h2>Web Applications</h2>
+                            <p>.NET Core projects demonstrating backend expertise.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="Merch.jpg" alt="Merchandise">
-                        <h2>Merch:</h2>
-                        <p>Some Merches:</p>
-                    </div>
+                <!-- Websites Card -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <a href="https://github.com/raderex/portfolio" target="_blank">
+                        <div class="card">
+                            <img src="webdev.png" alt="Website Development">
+                            <h2>Websites</h2>
+                            <p>Personally designed and developed websites.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- contact section -->
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h1>Contact Me</h1>
             <form>
@@ -147,9 +159,19 @@
     <!-- footer section -->
     <footer>
         <div class="container">
-            <p>Copyright &copy; 2024 My Portfolio</p>
+            <p>Copyright &copy; 2025 My Portfolio</p>
         </div>
     </footer>
-    <script type="text/javascript" src="web.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1200, // animation duration in ms
+            once: true, // animation happens only once
+            easing: 'ease-in-out', // easing effect
+        });
+    </script>
 </body>
-</html>5
+</html>

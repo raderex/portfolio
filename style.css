@@ -1,167 +1,408 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+/* Additional Animations */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
+/* Shake Animation for error feedback */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Slide In Animation for portfolio cards */
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar item fade-in animation */
+.navbar-nav .nav-link {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Form feedback for success or failure */
+.form-feedback {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+/* Portfolio Cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects on portfolio cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+    background-color: #F1C40F;
+    color: #000;
+}
+
+/* Smooth Hover Effects for cards */
+.card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Impact', sans-serif;
+    color: #F1C40F;
+}
+
+h3, p {
+    color: #fff;
+}
+
+a {
+    color: #F1C40F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E67E22;
+}
+
+/* Navbar Styles */
 .navbar {
-  background-color: #333;
-  padding: 1rem;
+    background-color: #000;
+    border-bottom: 2px solid #F1C40F;
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
+    color: #F1C40F;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.navbar-nav {
-  margin-left: auto;
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
 }
 
-.nav-link {
-  color: #fff;
-  transition: color 0.2s ease;
+.navbar-nav .nav-link:hover {
+    color: #F1C40F;
 }
 
-.nav-link:hover {
-  color: #ccc;
+/* Section Styles */
+section {
+    padding: 80px 0;
+    text-align: center;
 }
 
+/* Home Section */
 #home {
-  background-image: url('hello.jpg');
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+    background-color: #000;
+    color: #F1C40F;
 }
 
 #home h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
 #home p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
-#home button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
+/* About Section */
 #about {
-  padding: 2rem;
+    background-color: #000;
 }
 
 #about h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 40px;
+    color: #F1C40F;
 }
 
 #about p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+    font-size: 18px;
 }
 
+/* Services Section */
 #services {
-  padding: 2rem;
+    padding: 80px 0;
+    background-color: #111;
+    color: #f1c40f;
 }
 
 #services h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out forwards;
 }
 
+#services .card {
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#services .card:hover {
+    background-color: #F1C40F;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+}
+
+#services .card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#services p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+
 .card {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #F1C40F;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #F1C40F;
+    color: #000;
 }
 
 .card i {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.card p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
+/* Portfolio Section */
 #portfolio {
-  padding: 2rem;
+    background-color: #000;
 }
 
 #portfolio h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 40px;
+    color: #F1C40F;
 }
 
-#portfolio.card {
-  margin-bottom: 2rem;
+#portfolio .card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #F1C40F;
 }
 
+/* Contact Section */
 #contact {
-  padding: 2rem;
+    background-color: #000;
 }
 
 #contact h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 40px;
+    color: #F1C40F;
 }
 
-form {
-  margin-top: 2rem;
+#contact .form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #F1C40F;
 }
 
-.form-group {
-  margin-bottom: 1rem;
+#contact button {
+    background-color: #F1C40F;
+    color: #000;
 }
 
-label {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-input, textarea {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  width: 100%;
-}
-
-button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
+/* Footer Styles */
 footer {
-  background-color: #333;
-  padding: 1rem;
-  text-align: center;
-  color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
 }
+
+footer p {
+    color: #fff;
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+[data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+[data-aos="fade-in"] {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+[data-aos="slide-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+[data-aos="slide-left"] {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+[data-aos="slide-right"] {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F1C40F;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top.visible {
+    display: block;
+    opacity: 1;
+}
+
+.scroll-to-top:hover {
+    background-color: #E67E22;
+}
+/* Additional Animations */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Shake Animation for error feedback */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Slide In Animation for portfolio cards */
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar item fade-in animation */
+.navbar-nav .nav-link {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Form feedback for success or failure */
+.form-feedback {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+/* Portfolio Cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects on portfolio cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+    background-color: #F1C40F;
+    color: #000;
+}
+
+/* Smooth Hover Effects for cards */
+.card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+#home img {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Hover effect - scale and shadow */
+#home img:hover {
+    transform: scale(1.1); /* Slightly scale up the image */
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.7); /* Add glowing effect */
+}
+
+/* Add animation when the image comes into view */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when image loads */
+#home img {
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
